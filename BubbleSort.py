@@ -4,12 +4,17 @@ class BubbleSort:
         self.n = n
 
     def bubbleSort(self):
-        for k in range(0, len(A)):
+        for k in range(1, len(A)-1):
+            flag = 0
             for i in range(0, len(A)-2):
                 if A[i] > A[i + 1]:
                     temp = A[i+1]
                     A[i+1] = A[i]
                     A[i] = temp
+                    flag+=1
+
+            if flag == 0:
+                break
 
     def show(self):
         for i in  range(len(A)-1):
